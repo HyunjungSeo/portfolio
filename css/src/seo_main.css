@@ -1,5 +1,5 @@
 /* js_06_accordion_lotte.css */
-
+@media screen and (max-width:899px) {
 html,body{width: 100%; height: 100%;}
 
 #wrap{width: 100%; height: 100%; position: relative;}
@@ -11,9 +11,11 @@ html,body{width: 100%; height: 100%;}
        .study_01{background-color: #FF7473;}
        .study_02{background-color: #FFC952;}
        .study_03{background-color: #47B8E0;}
-     .pro_go{width: 70%; height: 70px; border:2px solid #555; margin-left: 15%; margin-top: 40px;}
-     .pro_go>a{display: block; width: 100%; height: 100%; text-align: center; line-height: 70px; font-size: 18px; color:#333; font-weight: bold;}
-     .pro_go>a:hover{background-color: #555; color:#fff;}
+     .pro_go{width: 70%; height: 70px; border:2px solid #555; margin-left: 15%; margin-top: 40px; padding: 10% 3%; box-sizing: border-box;}
+     .pro_go>a{display: block; width: 100%; height: 100%; text-align: center; font-size: 12px; color:#333; font-weight: bold;}
+     .pro_study_01_go>a:hover{background-color: #555; color:#fff;}
+     .pro_study_03_go>a:hover{background-color: #555; color:#fff;}
+     
 
    #studyBox.box_fixed{top: 0;}
    #studyShowBox{width: 100%; height: 50px;}
@@ -32,25 +34,27 @@ html,body{width: 100%; height: 100%;}
       #gnb>ul>li>a>.poject_01_img{background-image: url(../../img/project_01.jpg); left: 0;}
       #gnb>ul>li>a>.poject_02_img{background-image: url(../../img/project_02.jpg); }
       #gnb>ul>li>a>.poject_03_img{background-image: url(../../img/project_03.jpg); right: 0; }
-      #gnb>ul>li>a:hover>.project_img{background-size:auto 120%;}
+      #gnb>ul>li>a:hover>.poject_01_img{background-size:auto 120%;}
+      #gnb>ul>li>a:hover>.poject_03_img{background-size:auto 120%;}
 
-      #gnb .main_t{width: 100%; position: absolute; top: 100px; text-align: center; font-size: 1.5rem;}
-      #gnb .sub_t{width: 100%; position: absolute; top: 230px; text-align: center; margin-bottom: 50px; border-bottom: 5px solid #fff;}
-      #gnb a:hover>.sub_t{border-bottom: 5px solid #444;}
+      #gnb .main_t{width: 100%; position: absolute; top: 100px; text-align: center; font-size: 1.3rem;}
+      #gnb .sub_t{width: 100%; position: absolute; top: 230px; text-align: center; margin-bottom: 50px; border-bottom: 5px solid #fff; font-size: 1rem;}
+      #gnb li:nth-child(1)>a:hover>.sub_t{border-bottom: 5px solid #444;}
+      #gnb li:nth-child(3)>a:hover>.sub_t{border-bottom: 5px solid #444;}
 
-      #gnb .page_go{width: 60%; height: 120px; position: absolute; bottom: 290px; left:20%; border:2px solid rgba(255,255,255,0.5);}
-      .page_go>p{font-size: 1rem; line-height: 120px;}
-      #gnb a:hover>.page_go{border:2px solid rgba(0,0,0,0.3);}
+      #gnb .page_go{width: 60%; height: 120px; position: absolute; bottom: 20%; left:20%; border:2px solid rgba(255,255,255,0.5);}
+      .page_go>p{display: block; width: 100%; height: 100%; padding: 40% 3%; box-sizing: border-box; font-size: 0.8rem;}
+      #gnb li:nth-child(1)>a:hover>.page_go{border:2px solid rgba(0,0,0,0.3);}
+      #gnb li:nth-child(3)>a:hover>.page_go{border:2px solid rgba(0,0,0,0.3);}
 
-      #gnb a:hover{/* background-color: rgba(20,20,20,0); */ color:#333; font-size: 3rem; width: 130%; background-color: inherit; z-index: 200; left: -15%;}
+     #gnb>ul>li:nth-child(1)>a:hover{color:#333; font-size: 3rem; width: 130%; background-color: inherit; z-index: 200; left: 0;}
+     #gnb>ul>li:nth-child(3)>a:hover{color:#333; font-size: 3rem; width: 130%; background-color: inherit; z-index: 200; left: -30%;}
       #gnb a:hover>.project_img{opacity: 0.6;}
 
       #gnb a:focus{color:#333; font-size: 3rem; background-color: inherit; z-index: 200;}
 
       #gnb a.focus:after{content:"프로젝트 보러가기 \A Go"; white-space: pre; display:block; width:80%; height:10%; min-height:50px; position:absolute; bottom:10%; left:10%; background-color:rgba(255,255,255,0.8); border-radius:3rem; text-align: center; font-size:1.2rem; color:#222; padding-top:2rem;}
-
-      #gnb li:nth-child(1)>a:hover{left: 0;}
-      #gnb li:nth-child(3)>a:hover{left: -30%;}
+      #gnb li:nth-child(2)>a.focus:after{display: none;}
 
  #moreView{width: 100%; height: 10%; max-height: 40px; background-color: #555; position: absolute; left: 0; bottom: 0; z-index: 300; box-shadow: 0 -0.05rem 0.1rem rgba(0,0,0,0.5);}
  #moreView:hover{background-color: #f06;}
@@ -60,3 +64,143 @@ html,body{width: 100%; height: 100%;}
 
  #potpolio{width: 100%; height: 100%;}
  #potpolio>img{width: 100%; height: 140%;}
+}
+
+
+/*------------------------------------------------*/
+
+@media screen and (min-width:900px) and (max-width:1366px) {
+html,body{width: 100%; height: 100%;}
+
+#wrap{width: 100%; height: 100%; position: relative;}
+ #headBox{width: 100%; height: 100%;}
+ h1{width: 0; height: 0; overflow: hidden; position: absolute; z-index: -1;}
+ #studyBox{width: 100%; height: 200px; position: fixed; top: -150px; left: 0; z-index: 1000; background-color: transparent; transition: all 500ms ease;}
+   #studyGo{width: 100%; height: 150px;}
+     .study_project{width: 33.333333%; height: 100%; float: left;}
+       .study_01{background-color: #FF7473;}
+       .study_02{background-color: #FFC952;}
+       .study_03{background-color: #47B8E0;}
+     .pro_go{width: 70%; height: 70px; border:2px solid #555; margin-left: 15%; margin-top: 40px;}
+     .pro_go>a{display: block; width: 100%; height: 100%; text-align: center; line-height: 70px; font-size: 13px; color:#333; font-weight: bold;}
+     .pro_study_01_go>a:hover{background-color: #555; color:#fff;}
+     .pro_study_03_go>a:hover{background-color: #555; color:#fff;}
+     
+
+   #studyBox.box_fixed{top: 0;}
+   #studyShowBox{width: 100%; height: 50px;}
+     #studyShowBtn{width: 300px; height: 50px; background-color: #555; margin: 0 auto;}
+       #studyShowBtn>button{width: 100%; height: 100%; background-color: transparent; color:#fff;}
+
+  #gnb{width: 100%; height: 100%;}
+   #gnb>ul{width: 100%; height: 100%;}
+    #gnb li{width: 33.333333%; height: 100%; float: left; position: relative;}
+     #gnb li:nth-child(1){background-color: #FF7473;}
+     #gnb li:nth-child(2){background-color: #FFC952;}
+     #gnb li:nth-child(3){background-color: #47B8E0;}
+      #gnb>ul>li>a{width: 100%; height: 100%; display: block; text-align: center; font-size: 2.5rem; color:#fff; font-weight: bold; background-color: rgba(20,20,20,0.3); transition:all 300ms ease; position: absolute; right: 0; left: 0;}
+      
+      .project_img{width: 100%; height: 100%; position: absolute; background-repeat:no-repeat; background-position:center; background-size:auto 100%; opacity:0.2; top: 0; transition:all 400ms ease;}
+      #gnb>ul>li>a>.poject_01_img{background-image: url(../../img/project_01.jpg); left: 0;}
+      #gnb>ul>li>a>.poject_02_img{background-image: url(../../img/project_02.jpg); }
+      #gnb>ul>li>a>.poject_03_img{background-image: url(../../img/project_03.jpg); right: 0; }
+      #gnb>ul>li>a:hover>.poject_01_img{background-size:auto 120%;}
+      #gnb>ul>li>a:hover>.poject_03_img{background-size:auto 120%;}
+
+      #gnb .main_t{width: 100%; position: absolute; top: 100px; text-align: center; font-size: 1.5rem;}
+      #gnb .sub_t{width: 100%; position: absolute; top: 230px; text-align: center; margin-bottom: 50px; border-bottom: 5px solid #fff; font-size: 1.7rem;}
+      #gnb li:nth-child(1)>a:hover>.sub_t{border-bottom: 5px solid #444;}
+      #gnb li:nth-child(3)>a:hover>.sub_t{border-bottom: 5px solid #444;}
+
+      #gnb .page_go{width: 80%; height: 120px; position: absolute; bottom: 200px; left:10%; border:2px solid rgba(255,255,255,0.5);}
+      .page_go>p{font-size: 1rem; line-height: 120px;}
+      #gnb li:nth-child(1)>a:hover>.page_go{border:2px solid rgba(0,0,0,0.3);}
+      #gnb li:nth-child(3)>a:hover>.page_go{border:2px solid rgba(0,0,0,0.3);}
+
+     #gnb>ul>li:nth-child(1)>a:hover{color:#333; font-size: 3rem; width: 130%; background-color: inherit; z-index: 200; left: 0;}
+     #gnb>ul>li:nth-child(3)>a:hover{color:#333; font-size: 3rem; width: 130%; background-color: inherit; z-index: 200; left: -30%;}
+      #gnb a:hover>.project_img{opacity: 0.6;}
+
+      #gnb a:focus{color:#333; font-size: 3rem; background-color: inherit; z-index: 200;}
+
+      #gnb a.focus:after{content:"프로젝트 보러가기 \A Go"; white-space: pre; display:block; width:80%; height:10%; min-height:50px; position:absolute; bottom:10%; left:10%; background-color:rgba(255,255,255,0.8); border-radius:3rem; text-align: center; font-size:1.2rem; color:#222; padding-top:2rem;}
+      #gnb li:nth-child(2)>a.focus:after{display: none;}
+
+ #moreView{width: 100%; height: 10%; max-height: 40px; background-color: #555; position: absolute; left: 0; bottom: 0; z-index: 300; box-shadow: 0 -0.05rem 0.1rem rgba(0,0,0,0.5);}
+ #moreView:hover{background-color: #f06;}
+ #moreView:active{transition: all 300ms ease;}
+ #moreView>a{display: block; width: 100%; height: 100%;}
+ #moreView h2{width: 100%; box-sizing: border-box; height: 100%; max-height: 30px; color:#fff; text-align: center; padding: 0.5rem; font-size: 1.2rem;}
+
+ #potpolio{width: 100%; height: 100%;}
+ #potpolio>img{width: 100%; height: 140%;}
+}
+
+/*----------------------------------------------------------*/
+
+@media screen and (min-width:1367px) {
+html,body{width: 100%; height: 100%;}
+
+#wrap{width: 100%; height: 100%; position: relative;}
+ #headBox{width: 100%; height: 100%;}
+ h1{width: 0; height: 0; overflow: hidden; position: absolute; z-index: -1;}
+ #studyBox{width: 100%; height: 200px; position: fixed; top: -150px; left: 0; z-index: 1000; background-color: transparent; transition: all 500ms ease;}
+   #studyGo{width: 100%; height: 150px;}
+     .study_project{width: 33.333333%; height: 100%; float: left;}
+       .study_01{background-color: #FF7473;}
+       .study_02{background-color: #FFC952;}
+       .study_03{background-color: #47B8E0;}
+     .pro_go{width: 70%; height: 70px; border:2px solid #555; margin-left: 15%; margin-top: 40px;}
+     .pro_go>a{display: block; width: 100%; height: 100%; text-align: center; line-height: 70px; font-size: 18px; color:#333; font-weight: bold;}
+     .pro_study_01_go>a:hover{background-color: #555; color:#fff;}
+     .pro_study_03_go>a:hover{background-color: #555; color:#fff;}
+     
+
+   #studyBox.box_fixed{top: 0;}
+   #studyShowBox{width: 100%; height: 50px;}
+     #studyShowBtn{width: 300px; height: 50px; background-color: #555; margin: 0 auto;}
+       #studyShowBtn>button{width: 100%; height: 100%; background-color: transparent; color:#fff;}
+
+  #gnb{width: 100%; height: 100%;}
+   #gnb>ul{width: 100%; height: 100%;}
+    #gnb li{width: 33.333333%; height: 100%; float: left; position: relative;}
+     #gnb li:nth-child(1){background-color: #FF7473;}
+     #gnb li:nth-child(2){background-color: #FFC952;}
+     #gnb li:nth-child(3){background-color: #47B8E0;}
+      #gnb>ul>li>a{width: 100%; height: 100%; display: block; text-align: center; font-size: 2.5rem; color:#fff; font-weight: bold; background-color: rgba(20,20,20,0.3); transition:all 300ms ease; position: absolute; right: 0; left: 0;}
+      
+      .project_img{width: 100%; height: 100%; position: absolute; background-repeat:no-repeat; background-position:center; background-size:auto 100%; opacity:0.2; top: 0; transition:all 400ms ease;}
+      #gnb>ul>li>a>.poject_01_img{background-image: url(../../img/project_01.jpg); left: 0;}
+      #gnb>ul>li>a>.poject_02_img{background-image: url(../../img/project_02.jpg); }
+      #gnb>ul>li>a>.poject_03_img{background-image: url(../../img/project_03.jpg); right: 0; }
+      #gnb>ul>li>a:hover>.poject_01_img{background-size:auto 120%;}
+      #gnb>ul>li>a:hover>.poject_03_img{background-size:auto 120%;}
+
+      #gnb .main_t{width: 100%; position: absolute; top: 100px; text-align: center; font-size: 1.5rem;}
+      #gnb .sub_t{width: 100%; position: absolute; top: 230px; text-align: center; margin-bottom: 50px; border-bottom: 5px solid #fff;}
+      #gnb li:nth-child(1)>a:hover>.sub_t{border-bottom: 5px solid #444;}
+      #gnb li:nth-child(3)>a:hover>.sub_t{border-bottom: 5px solid #444;}
+
+      #gnb .page_go{width: 60%; height: 120px; position: absolute; bottom: 200px; left:20%; border:2px solid rgba(255,255,255,0.5);}
+      .page_go>p{font-size: 1rem; line-height: 120px;}
+      #gnb li:nth-child(1)>a:hover>.page_go{border:2px solid rgba(0,0,0,0.3);}
+      #gnb li:nth-child(3)>a:hover>.page_go{border:2px solid rgba(0,0,0,0.3);}
+
+     #gnb>ul>li:nth-child(1)>a:hover{color:#333; font-size: 3rem; width: 130%; background-color: inherit; z-index: 200; left: 0;}
+     #gnb>ul>li:nth-child(3)>a:hover{color:#333; font-size: 3rem; width: 130%; background-color: inherit; z-index: 200; left: -30%;}
+      #gnb a:hover>.project_img{opacity: 0.6;}
+
+      #gnb a:focus{color:#333; font-size: 3rem; background-color: inherit; z-index: 200;}
+
+      #gnb a.focus:after{content:"프로젝트 보러가기 \A Go"; white-space: pre; display:block; width:80%; height:10%; min-height:50px; position:absolute; bottom:10%; left:10%; background-color:rgba(255,255,255,0.8); border-radius:3rem; text-align: center; font-size:1.2rem; color:#222; padding-top:2rem;}
+      #gnb li:nth-child(2)>a.focus:after{display: none;}
+
+ #moreView{width: 100%; height: 10%; max-height: 40px; background-color: #555; position: absolute; left: 0; bottom: 0; z-index: 300; box-shadow: 0 -0.05rem 0.1rem rgba(0,0,0,0.5);}
+ #moreView:hover{background-color: #f06;}
+ #moreView:active{transition: all 300ms ease;}
+ #moreView>a{display: block; width: 100%; height: 100%;}
+ #moreView h2{width: 100%; box-sizing: border-box; height: 100%; max-height: 30px; color:#fff; text-align: center; padding: 0.5rem; font-size: 1.2rem;}
+
+ #potpolio{width: 100%; height: 100%;}
+ #potpolio>img{width: 100%; height: 140%;}
+}

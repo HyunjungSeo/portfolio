@@ -86,7 +86,7 @@
  
  ul,ol,li{list-style:none; }
  a{text-decoration:none; color:#777;}
- a:hover, a:active{text-decoration:underline; color:#D07;}
+ a:hover, a:active{color:#D07;}
  
  
  code{ padding:6px; border:1px solid #777; background-color: #7af; }
